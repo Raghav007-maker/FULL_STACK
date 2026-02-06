@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        my feedback Site
+    {% endblock  %}</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    header, footer{
+        background-color: #333;
+        padding: 10px;
+        color:white;
+        text-align: center;
+    }   
+    nav a{
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    main{
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .error{
+        color:#170794;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Feedback Page</h1>
+        <nav>
+            <a href="/feedback">Feedback</a>
+        </nav>
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for msg in messages %}
+            <li class = "error"> {{ msg }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    {% block content%}
+        
+    {% endblock %}
+    <footer>
+        <p>
+            &copy : 2025 Hello world
+        </p>
+    </footer>
+    
+    </body>
+</html>

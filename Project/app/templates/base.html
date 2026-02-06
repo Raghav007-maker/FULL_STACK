@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>{% block title %} todo App {% endblock  %}</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My ToDo App</h1>
+    
+            <nav>
+                <a href="{{ url_for('tasks.view_tasks') }}">Home</a>
+                {% if 'user' in  session %}
+                    <a href = "{{url_for('auth.logout')}}">logout</a>
+                {% else %}
+                    <a href = "{{url_for('auth.login')}}">logout</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
