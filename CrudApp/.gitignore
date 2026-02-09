@@ -1,1 +1,4 @@
 *.bat
+*.db
+__pycache__/
+instance/
