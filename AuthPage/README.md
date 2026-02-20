@@ -121,8 +121,8 @@ Backend validation for all forms
 
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/yourusername/auth-project.git
-cd auth-project
+git clone https://github.com/Raghav007-maker/FULL_STACK/edit/main/AuthPage.git
+cd AuthPage
 2️⃣ Create Virtual Environment
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
